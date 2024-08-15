@@ -76,8 +76,8 @@ data_collator = DataCollatorForLanguageModeling(
 model = XLMRobertaForMaskedLM.from_pretrained(model_name)
 
 os.environ['MASTER_ADDR'] = 'localhost'
-os.environ['MASTER_PORT'] = '12355'
-os.environ['WORLD_SIZE'] = '1'
+os.environ['MASTER_PORT'] = '50385'
+os.environ['WORLD_SIZE'] = '2'
 os.environ['RANK'] = '0'
 
 torch.distributed.init_process_group(backend="nccl")
