@@ -4,7 +4,6 @@ import re
 import os
 import json
 import string
-import gdown
 import torch
 import wandb
 from datasets import Dataset
