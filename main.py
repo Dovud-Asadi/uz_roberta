@@ -21,6 +21,8 @@ from torch.distributed.fsdp.wrap import always_wrap_policy
 # Initialize Weights & Biases for tracking
 wandb.init(project="xlm-roberta-uzbek")
 
+wandb.login(key='1db3b02d78973739be12be14efcbb1004e74bd2f')
+
 # Securely load the Hugging Face token
 import os
 login(token = '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')
