@@ -23,7 +23,7 @@ wandb.init(project="xlm-roberta-uzbek")
 
 # Securely load the Hugging Face token
 import os
-login(token=os.getenv('HF_TOKEN'))
+login(token = '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')
 
 
 # Clean text function
