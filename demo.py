@@ -19,6 +19,9 @@ login(token = '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')
 # Initialize Weights & Biases for tracking
 wandb.init(project="xlm-roberta-uzbek")
 
+
+wandb.login(key='1db3b02d78973739be12be14efcbb1004e74bd2f')
+
 # Clean text function
 def clean_text(text):
     text = text.lower()
