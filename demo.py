@@ -69,7 +69,7 @@ use_fp16 = torch.cuda.is_available()
 
 # Training arguments
 training_args = TrainingArguments(
-    output_dir="./results",  
+    output_dir="./results2",  
     overwrite_output_dir=True, 
     num_train_epochs=3,  
     per_device_train_batch_size=16, 
@@ -92,5 +92,5 @@ trainer = Trainer(
 
 trainer.train()
 
-model.save_pretrained("./uzbek_xlm_roberta_model")
-tokenizer.save_pretrained("./uzbek_xlm_roberta_tokenizer")
+model.save_pretrained("./uzbek_xlm_roberta_model2")
+tokenizer.save_pretrained("./uzbek_xlm_roberta_tokenizer2")
