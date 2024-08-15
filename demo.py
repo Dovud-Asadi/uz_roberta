@@ -42,6 +42,7 @@ def remove_less_than_twenty(lst):
     return [x for x in lst if len(x) > 20]
 
 sentences = remove_less_than_twenty(sentences)
+sentences = sentences[:50000]
 
 # Create dataset
 dataset = Dataset.from_dict({"text": sentences})
