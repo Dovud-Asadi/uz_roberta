@@ -15,8 +15,6 @@ from transformers import (
     DataCollatorForLanguageModeling
 )
 from huggingface_hub import login
-from torch.distributed.fsdp import FullyShardedDataParallel as FSDP
-from torch.distributed.fsdp.wrap import always_wrap_policy
 
 # Initialize Weights & Biases for tracking
 wandb.init(project="xlm-roberta-uzbek")
@@ -80,8 +78,7 @@ os.environ['MASTER_PORT'] = '50385'
 os.environ['WORLD_SIZE'] = '2'
 os.environ['RANK'] = '0'
 
-torch.distributed.init_process_group(backend="nccl")
-model = FSDP(model, auto_wrap_policy=always_wrap_policy)
+
 
 # Check if GPU is available
 use_fp16 = torch.cuda.is_available()
