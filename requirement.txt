@@ -4,3 +4,4 @@ transformers==4.42.4
 huggingface_hub==0.23.5
 wandb==0.17.6
 accelerator
+sentencepiece
