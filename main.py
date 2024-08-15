@@ -35,7 +35,7 @@ def clean_text(text):
     return text
 
 # Load and clean text
-file_path = 'data\full_data_with_period.txt'
+file_path = 'data\text.txt'
 
 with open(file_path, 'r', encoding='utf-8') as file:
     text = file.read()
